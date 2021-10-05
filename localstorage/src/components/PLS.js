@@ -218,8 +218,11 @@ export function PLS() {
   }
   const updateAnItemToLocalStorage =()=>{
     const fromLS = readFromLocalStorage();
-    if(fromLS.find(item => item.id === itemToUpdate)){
-      console.log('found item to update');
+    fromLS.find(item => item.id === itemToUpdate)
+    if(){
+      console.log('found item to update');      
+      item.description = '123456';
+      writeToLocalStorage(fromLS);
     }
     
   }
